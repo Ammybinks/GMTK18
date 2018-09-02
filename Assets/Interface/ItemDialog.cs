@@ -15,6 +15,13 @@ public class ItemDialog : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            DontDestroyOnLoad(currentItem.gameObject);
+            currentItem.latched = !currentItem.latched;
+            currentItem.transform.Rotate(new Vector3(0, 0, 1), 45);
+        }
+
 		if(currentItem != null)
         {
             if(dialog.activeSelf == false)

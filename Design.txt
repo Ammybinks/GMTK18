@@ -1,0 +1,62 @@
+!Haste-
+	+Attack Speed
+	--Range
+!!Puncture-
+	+Infinite Range
+	+Charge time, which gets interrupted with dashes
+	+Damage
+	++Projectile Speed
+	-Attack Speed
+!!Split-
+	+2 Shots, spread
+	-Damage
+!Blast-
+	+Slows Movement While Firing
+	++Damage
+!Restraint-
+	+Reduces spread on any multishots
+	-Attack Speed
+!!Tear-
+	+Each attack adds a fury stack, multiplying damage for each stack
+	-Sets damage to the lowest value
+!!Spike-
+	+360 spread, all extra shots contribute to spread
+	-Damage
+	-Range
+!Shock-
+	+Constant raycast attack
+	++Attack Speed
+	-Health
+!!Whisper-
+	+Converts all attack speed into damage
+	-Sets attack speed to lowest value
+!Burst-
+	+6 Shots
+	+Shots now fire with variant trajectory/velocity
+	-Attack Speed
+!!Snap-
+	+Attack damage now varies between 0 and twice the regular value
+!Mark-
+	+++Damage
+	+++Attack Speed
+	+++Range
+	-99% Health
+
+
+*Enemies
+Runner-
+/Low health
+/Fast movement
+/No Projectile
+/Damages on collision
+Turret-
+/Stationary
+/Fires large spread patterns
+Bully-
+/Fast
+/Moves close to the player
+/Fires spread patterns
+Sniper-
+/Slow
+/Moves away from player if needed
+/Periodically fires fast direct bullets

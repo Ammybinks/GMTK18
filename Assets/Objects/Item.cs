@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Item : MonoBehaviour {
+
+    //public delegate void Storage(float i);
+    //public static event Storage Latch;
 
     public string itemName;
     public string itemDesc;
 
     public int distance;
+
+    public bool latched;
 
     int threshold = 2;
 
@@ -21,7 +27,15 @@ public class Item : MonoBehaviour {
 	void Start () {
         player = GameObject.Find("Player");
         dialog = GameObject.Find("Canvas").GetComponent<ItemDialog>();
-	}
+
+        //GameObject item = GameObject.FindGameObjectWithTag(gameObject.tag);
+        //if(item.name != gameObject.name)
+        //{
+        //    gameObject.SetActive(false);
+        //}
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        //Item.Latch += CheckLatch;
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -46,4 +60,20 @@ public class Item : MonoBehaviour {
     {
         dialog.currentItem = null;
     }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(!latched)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    //private void CheckLatch(float i)
+    //{
+    //    if((int)i == (int)itemIndex && i != itemIndex)
+    //    {
+    //        gameObject.SetActive(false);
+    //    }
+    //}
 }
